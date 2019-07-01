@@ -10,7 +10,8 @@ import Dashboard from './Dashboard';
 import authProvider from './authProvider';
 
 
-const dataProvider = jsonServerProvider('http://jsonplaceholder.typicode.com');
+// const dataProvider = jsonServerProvider('http://jsonplaceholder.typicode.com');
+const dataProvider = jsonServerProvider('https://raw.githubusercontent.com/j0hnbarbosa/react-admin-test/master/src/data/data.js');
 const App = () => (
     <Admin dashboard={Dashboard} authProvider={authProvider} dataProvider={dataProvider}>
         <Resource name="posts" list={PostList} edit={PostEdit} create={PostCreate} icon={PostIcon}/>
